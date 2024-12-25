@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000/api/v1/',
+  apiUrl: 'http://ApplicationLB-1499880577.us-east-1.elb.amazonaws.com:5000/api/v1/',
 };
 
 /*
