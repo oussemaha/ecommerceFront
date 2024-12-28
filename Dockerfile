@@ -20,16 +20,10 @@ RUN npm install -g @angular/cli && \
 
 # Étape 2 : Configurer Nginx pour servir l'application
 FROM nginx:latest
-
-# Copier les fichiers Angular build dans le dossier Nginx
-COPY --from=build /app/dist/client /usr/share/nginx/html
-
-# Copier le fichier de configuration personnalisé de Nginx si nécessaire
-# Uncomment and modify the following line if you have a custom nginx.conf:
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY ./dist/* /usr/share/nginx/html/
 
 # Exposer le port 8080 pour le trafic HTTP
-EXPOSE 8080
+EXPOSE 80
 
 # Démarrer Nginx
 CMD ["nginx", "-g", "daemon off;"]
