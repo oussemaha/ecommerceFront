@@ -20,7 +20,7 @@ RUN npm install -g @angular/cli && \
 
 # Étape 2 : Configurer Nginx pour servir l'application
 FROM nginx:latest
-COPY ./dist/clinet/* /usr/share/nginx/html/
+COPY ./dist/client/* /usr/share/nginx/html/
 
 # Exposer le port 8080 pour le trafic HTTP
 EXPOSE 80
