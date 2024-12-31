@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api.igl4-ecommerce.me/api/v1/',
+  apiUrl: 'http://api.igl4-ecommerce.me/api/v1/',
 };
 
 /*
